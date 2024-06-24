@@ -129,9 +129,9 @@ Method: POST
 
 ### Endpoint filter by category and calculate total goals
 
-Endpoint Example: /api/v1/activities/types/1
+Endpoint Example: /api/v1/activities/types/2
 
-**(Note: number 1 in endpoint represents activity type ID field of ***activity_types*** table in database).**
+**(Note: number 2 in endpoint represents activity type ID field of ***activity_types*** table in database).**
 
 Method: GET
 
@@ -211,7 +211,7 @@ Includes some tests done to web service and API service.
 3. ) Copy ***.env.example*** file, rename to ***.env*** and configure database credentials.
 4. ) Generate encryption key executing command: ***php artisan key:generate***
 5. ) Configure desired admin email in: /config/admin.php
-6. ) Configure desired API parameters in: config/api.php
+6. ) Configure desired API parameters in: /config/api.php
 7. ) Execute migration of database ***php artisan migrate***
 8. ) Execute seeders of database ***php artisan db:seed***
 9. ) Execute command ***npm run dev***

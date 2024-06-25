@@ -32,6 +32,34 @@ Created API Rest with 3 endpoints:
 - Rate limiting feature enabled to prevent abuse (60 requests/minute).
 - Block IPs feature enabled.
 
+### Endpoint generates token to connect
+
+Endpoint: /api/v1/token
+
+Method: POST
+
+> __Example payload__:
+```json
+{
+    "email": "your@email.com",
+    "password": "yourpassword"
+}
+```
+> __Example response__:
+
+```json
+{
+    "success": true,
+    "access_token": "2|swsa4he55HzcLl3SsGiT45mxdNlKSJS1kT4Z740H3b2fc47b"
+}
+```
+
+Now, you must use generated access token in all your calls to API endpoints.
+
+__To use token, just add it as Bearer token format in ```Headers``` of requests__ like:
+
+```Authorization: Bearer 2|swsa4he55HzcLl3SsGiT45mxdNlKSJS1kT4Z740H3b2fc47b```
+
 ### Endpoint list activities
 
 Endpoint: /api/v1/activities

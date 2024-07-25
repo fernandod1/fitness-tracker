@@ -40,14 +40,6 @@ class ActivityController extends \App\Http\Controllers\Controller
      */
     public function filterByActivityType(ApiFilterActivityRequest $request)
     {
-        //dd($request);
-        /*
-        print_r($activity_type->id);
-        if(!$activity_type->id->exists())
-            dd($activity_type);
-        */
-        //if(!ActivityType::where("id", $activity_type)->exists())
-        //    return response()->json(['activities' => '', 'total_goals' => '', 'success' => false], 400);
         $activities = $this->activityService->getActivitiesByType($request->activity_type);        
         $totalGoals = $this->activityService->CalculateActivityTotalGoals($request->activity_type);
         return response()->json(['activities' => $activities, 'total_goals' => $totalGoals, 'success' => true], 200);
